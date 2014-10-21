@@ -48,3 +48,8 @@ response = urllib2.urlopen('http://envision.bioe.orst.edu/StudyAreas/WW2100/Outp
 zipdata = response.read()
 with zipfile.ZipFile(StringIO(zipdata), "r") as z:
     z.extractall(directory_path)
+
+response = urllib2.urlopen('http://envision.bioe.orst.edu/StudyAreas/WW2100/Outputs/EarlyRefill/Model_Outputs_EarlyRefill_Run0.zip')
+zipdata = response.read()
+with zipfile.ZipFile(StringIO(zipdata), "r") as z:
+    z.extractall(directory_path)
